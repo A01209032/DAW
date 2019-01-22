@@ -80,7 +80,17 @@ Mi navegador: Chrome Dev 71.0.3578.98 en Linux tiene un puntaje de 504 de 555 pu
 Sobre el ciclo de vida y desarrollo de los sistemas de información:
 ¿Cuál es el ciclo de vida de los sistemas de información?
 
+Ciclo de vida clasico (por cascada):
+Aproximacion secuencial al proceso de desarrollo de software
+	
+Desarrollo de prototipos:
+Riesgo reducido de fracaso, facilita la especificacion de requerimientos. Sin embargo, el cliente puede pensar que un prototipo es el producto final.
 
+Modelo Espiral:
+Modelo iterativo que previene riesgos, en cada iteracion se construyen versiones mas completas del software
+
+Modelo evolutivo:
+Se realizan entregas por etapas del sistema. El proyecto se descompone en iteraciones de longitud fija. Si el proyecto se llega a cancelar el usario se queda con lo maximo que se pudo conseguir con los recursos que invirtieron.
 
 ¿Cuál es el ciclo de desarrollo de sistemas de información?
 
