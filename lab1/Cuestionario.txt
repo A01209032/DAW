@@ -1,0 +1,104 @@
+¿Cuál es la diferencia entre Internet y la World Wide Web?
+
+world wide web: es parte del internet
+
+¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?
+
+GET: El método GET  solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos. 
+
+HEAD: El método HEAD pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta. 
+
+POST: El método POST se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor. 
+
+PUT:El modo PUT reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición. 
+
+PATCH: El método PATCH  es utilizado para aplicar modificaciones parciales a un recurso. 
+
+DELETE: El método DELETE borra un recurso en específico. 
+
+¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?
+
+Usuario y Contraseña: post, get no es seguro
+
+¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?
+
+GET
+
+Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?
+
+Codigo 200: todo esta bien. No ocurrio ningun error
+
+¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?
+
+Codigo 404: no esta en el servidor el recurso;
+
+Para los usuarios curiosos en vez de mandar 403: acceso prohibido; mandas 404
+
+¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?
+
+Codigo 500: error del desarrollador, no deben de existir;
+
+¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.
+
+Que es obsoleto
+
+¿Cuáles son las diferencias principales entre HTML 4 y HTML5?
+
+Atributos depreciados o desaprobados: 
+  etiquetas de estilo:
+  <i>fdsfds</i> (html4 = italicas) (html5 = icono) (html5 = italicas = <em>)
+  <b> (html4 = ngeritas) (html5 = <strong>)
+ <br/>
+
+
+
+html5: hay etiquetas que no necesitan cierre
+
+¿Qué componentes de estructura y estilo tiene una tabla?
+
+thea, tbody, tfoot
+
+¿Cuáles son los principales controles de una forma HTML5?
+
+<form>	Defines an HTML form for user input
+<input>	Defines an input control
+<textarea>	Defines a multiline input control (text area)
+<label>	Defines a label for an <input> element
+<fieldset>	Groups related elements in a form
+<legend>	Defines a caption for a <fieldset> element
+<select>	Defines a drop-down list
+<optgroup>	Defines a group of related options in a drop-down list
+<option>	Defines an option in a drop-down list
+<button>	Defines a clickable button
+<datalist>	Specifies a list of pre-defined options for input controls
+<output>	Defines the result of a calculation
+
+¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)
+
+Mi navegador: Chrome Dev 71.0.3578.98 en Linux tiene un puntaje de 504 de 555 puntos. 
+
+Sobre el ciclo de vida y desarrollo de los sistemas de información:
+¿Cuál es el ciclo de vida de los sistemas de información?
+
+
+
+¿Cuál es el ciclo de desarrollo de sistemas de información?
+
+Planificacion
+Analisis
+Diseño
+Implementación
+Pruebas
+Instalación / Despliegue
+Uso y mantenimiento
+
+Referencias:
+
+http://html5test.com/
+
+https://www.w3schools.com/
+
+https://elvex.ugr.es/idbis/db/docs/lifecycle.pdf
+
+
+
