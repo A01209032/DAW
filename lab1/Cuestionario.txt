@@ -71,11 +71,11 @@ thea, tbody, tfoot
 <option>	Defines an option in a drop-down list
 <button>	Defines a clickable button
 <datalist>	Specifies a list of pre-defined options for input controls
-<output>	Defines the result of a calculation
+<output>	Defines the result of a calculation [2]
 
 ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)
 
-Mi navegador: Chrome Dev 71.0.3578.98 en Linux tiene un puntaje de 504 de 555 puntos. 
+Mi navegador: Chrome Dev 71.0.3578.98 en Linux tiene un puntaje de 504 de 555 puntos. [1]
 
 Sobre el ciclo de vida y desarrollo de los sistemas de información:
 ¿Cuál es el ciclo de vida de los sistemas de información?
@@ -90,7 +90,7 @@ Modelo Espiral:
 Modelo iterativo que previene riesgos, en cada iteracion se construyen versiones mas completas del software
 
 Modelo evolutivo:
-Se realizan entregas por etapas del sistema. El proyecto se descompone en iteraciones de longitud fija. Si el proyecto se llega a cancelar el usario se queda con lo maximo que se pudo conseguir con los recursos que invirtieron.
+Se realizan entregas por etapas del sistema. El proyecto se descompone en iteraciones de longitud fija. Si el proyecto se llega a cancelar el usario se queda con lo maximo que se pudo conseguir con los recursos que invirtieron.[3]
 
 ¿Cuál es el ciclo de desarrollo de sistemas de información?
 
@@ -100,15 +100,15 @@ Diseño
 Implementación
 Pruebas
 Instalación / Despliegue
-Uso y mantenimiento
+Uso y mantenimiento [3]
 
 Referencias:
 
-http://html5test.com/
+http://html5test.com/ [1]
 
-https://www.w3schools.com/
+https://www.w3schools.com/[2]
 
-https://elvex.ugr.es/idbis/db/docs/lifecycle.pdf
+https://elvex.ugr.es/idbis/db/docs/lifecycle.pdf [3]
 
 
 
