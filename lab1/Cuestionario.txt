@@ -46,8 +46,8 @@
 <pre>
 <p>Atributos depreciados o desaprobados: 
   etiquetas de estilo:
-  <i>fdsfds</i> (html4 = italicas) (html5 = icono) (html5 = italicas = <em>)
-  <b> (html4 = ngeritas) (html5 = <strong>)
+  &lt;i&gt;fdsfds&lt;/i&gt; (html4 = italicas) (html5 = icono) (html5 = italicas = &lt;em&gt;)
+  &lt;b&gt; (html4 = ngeritas) (html5 = &lt;strong&gt;)
  <br/>
 </p>
 </pre>
@@ -60,18 +60,18 @@
 
 <h2>¿Cuáles son los principales controles de una forma HTML5?</h2>
 
-<p><form>	Defines an HTML form for user input</p>
-<p><input>	Defines an input control</p>
-<p><textarea>	Defines a multiline input control (text area)</p>
-<p><label>	Defines a label for an <input> element</p>
-<p><fieldset>	Groups related elements in a form</p>
-<p><legend>	Defines a caption for a <fieldset> element</p>
-<p><select>	Defines a drop-down list</p>
-<p><optgroup>	Defines a group of related options in a drop-down list</p>
-<p><option>	Defines an option in a drop-down list</p>
-<p><button>	Defines a clickable button</p>
-<p><datalist>	Specifies a list of pre-defined options for input controls</p>
-<p><output>	Defines the result of a calculation [2]</p>
+<p>&lt;form&gt;	Defines an HTML form for user input</p>
+<p>&lt;input&gt;	Defines an input control</p>
+<p>&lt;textarea>&gt;	Defines a multiline input control (text area)</p>
+<p>&lt;label>&gt;	Defines a label for an <input> element</p>
+<p>&lt;fieldset>&gt;	Groups related elements in a form</p>
+<p>&lt;legend>&gt;	Defines a caption for a <fieldset> element</p>
+<p>&lt;select>&gt;	Defines a drop-down list</p>
+<p>&lt;optgroup>&gt;	Defines a group of related options in a drop-down list</p>
+<p>&lt;option&gt;	Defines an option in a drop-down list</p>
+<p>&lt;button&gt;	Defines a clickable button</p>
+<p>&lt;datalist&gt;	Specifies a list of pre-defined options for input controls</p>
+<p>&lt;output&gt;	Defines the result of a calculation [2]</p>
 
 <h2>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)</h2>
 
