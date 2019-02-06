@@ -3,31 +3,80 @@
   <head>
     <meta charset="utf-8">
     <title>Shop</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <head>
+    <header>
         <h1>Venta de productos</h1>
-    </head>
-    <article class="productos">
-      <article class="producto">
+    </header>
+    <div class="row">
+      <div class="col s2 m2 l2">
+        <h2>Carrito</h2>
+        <table>
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Nepenthes</td>
+            <td><p id="Nep">0</p></td>
+            <td>$<p id="NepC">0</p></td>
+          </tr>
+          <tr>
+            <td>Drosera</td>
+            <td><p id="Dros">0</p></td>
+            <td>$<p id="DrosC">0</p></td>
+          </tr>
+          <tr>
+            <td>Pinguicola</td>
+            <td><p id="Ping">0</p></td>
+            <td>$<p id="PingC">0</p></td>
+          </tr>
+          <tr>
+            <td>Total (con IVA)</td>
+            <td><p id="total">0</p></td>
+            <td>$<p id="totalC">0</p></td>
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
+      <div class="col s3 m3 l3">
         <img src="nepenthes.jpg" alt="Nepenthes" height="300" width="300">
         <p>300<p>
         <input type="button" value="-" onclick="subvalue('producto1')">
-        <input type="number" name="" value="" id="producto1">
+        <input type="number" name="" value="0" id="producto1">
         <input type="button" value="+" onclick="addvalue('producto1')">
+      </div>
+      <div class="col s3 m3 l3">
         <img src="Drosera.jpg" alt="Drosera" height="300" width="300">
         <p>200<p>
         <input type="button" value="-" onclick="subvalue('producto2')">
-        <input type="number" name="" value="" id="producto2">
+        <input type="number" name="" value="0" id="producto2">
         <input type="button" value="+" onclick="addvalue('producto2')">
+      </div>
+      <div class="col s3 m3 l3">
         <img src="pinguicola.jpg" alt="Pinguicola" height="300" width="300">
         <p>100<p>
         <input type="button" value="-" onclick="subvalue('producto3')">
-        <input type="number" name="" value="" id="producto3">
+        <input type="number" name="" value="0" id="producto3">
         <input type="button" value="+" onclick="addvalue('producto3')">
+      </div>
+    </div>
+    <article class="productos">
+      <article class="producto">
+
+
+
       </article>
     </article>
     <script src="shop.js" charset="utf-8"></script>
+     <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
