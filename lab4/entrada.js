@@ -39,14 +39,17 @@ function contador(arr){
   alert("Positivos: " + positivos+ " Negativos: " + negativos + " Ceros: " + ceros);
 }
 
-function promedio(matriz){
+function promedio(){
+  matriz=[[document.getElementById('numero1').innerHTML,document.getElementById('numero2').innerHTML],[document.getElementById('numero3').innerHTML,document.getElementById('numero4').innerHTML],[document.getElementById('numero5').innerHTML,document.getElementById('numero6').innerHTML]];
   var promedio=0;
+  console.log(promedio);
   for(var i=0;matriz.length>i;i++){
     for(var j=0;matriz[i].length;j++){
-      promedio = promedio + arreglo[i][j];
+      promedio = promedio + matriz[i][j];
     }
-    promedio = promedio/arreglo[i].length;
-    document.write(promedio);
+    console.log(i);
+    promedio = promedio/matriz[i].length;
+    alert(promedio);
     promedio=0;
   }
 }
@@ -59,4 +62,34 @@ function inverso(numero){
     y=Math.floor(y/10);
   }while(y>0);
   alert(x);
+}
+
+function ACM(){
+  var x1=document.getElementById('ACM1').value;
+  var y1=document.getElementById('ACM2').value;
+  var x2=document.getElementById('ACM3').value;
+  var y2=document.getElementById('ACM4').value;
+  var resX;
+  var resY;
+  if(x1==x2){
+    resX=0;
+  }
+  else if(x1>x2){
+    resX=x1-x2;
+  }
+  else if(x2>x1){
+    resX=x2-x1;
+  }
+  if(y1==y2){
+    resY=0;
+  }
+  else if(y1>y2){
+    resY=y1-y2;
+  }
+  else if(y2>y1){
+    resY=y2-y1;
+  }
+  if(resY>resX) document.getElementById('resultadoACM').innerHTML= resY;
+  else document.getElementById('resultadoACM').innerHTML= resX ;
+
 }
