@@ -3,47 +3,114 @@
   <head>
       <script src="entrada.js" charset="utf-8"></script>
       <link rel="stylesheet" href="main.css">
+      <title>Laboratorio 4</title>
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   </head>
 <body>
-
   <div class="row">
-        <div class="col s2">
-        <input type="button" value="generaTabla" onclick="generaTabla()">
-        <div id="tabla">
-        </div>
-        </div>
-        <div class="col s2">
-        <input type="button" value="Suma Random" onclick="sumaRandom()">
-        </div>
-        <div class="col s2">
-        <input type="text" name="Arreglo" value="" id="Arreglo">
-        <input type="button" value="Contador" onclick="contador('Arreglo')">
-        </div>
-        <div class="col s2">4
-          <input type="number" name="numero 1" value="0" id="numero1">
-          <input type="number" name="numero 2" value="0" id="numero2">
-          <input type="number" name="numero 3" value="0" id="numero3">
-          <input type="number" name="numero 4" value="0" id="numero4">
-          <input type="number" name="numero 5" value="0" id="numero5">
-          <input type="number" name="numero 6" value="0" id="numero6">
-          <input type="button" value="Promedio" onclick="promedio()">
-        </div>
-        <div class="col s2">5</div>
-        <div class="col s12">
-          <p>6</p>
-          <input type="number" name="Input1" value="" id="ACM1">
-          <input type="number" name="Input2" value="" id="ACM2">
-          <input type="number" name="Input3" value="" id="ACM3">
-          <input type="number" name="Input4" value="" id="ACM4">
-          <input type="button" value="r" onclick="ACM()">
-          <p>Resultado: <p id="resultadoACM"></p></p>
+    <div class="col s12 light-blue lighten-2">
+      <h1>Laboratorio 4</h1>
+    </div>
+        <div class="col s0 m2">
 
         </div>
-        <div class="col s6">
-          <img src="images/ACM.png" alt="image">
+        <div class="col s12 m8">
+          <br>
+
+          <h4>Script 1:</h4>
+          <h5>Entrada: un número pedido con un prompt. Salida: Una tabla con los números del 1 al número dado con sus cuadrados y cubos. Utiliza document.write para producir la salida
+          </h5>
+          <br>
+          <div class="center-align">
+            <a class="waves-effect waves-light btn" onclick="generaTabla()">Generar Tabla</a>
+          </div>
+          <div id="tabla">
+          </div>
+
+          <h4>Script 2:</h4>
+          <h5>Entrada: Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. Salida: La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en escribir la respuesta.
+          </h5>
+          <br>
+          <div class="center-align">
+            <a class="waves-effect waves-light btn" onclick="sumaRandom()">Suma Random</a>
+          </div>
+
+          <h4>Script 3:</h4>
+          <h5>Función: contador. Parámetros: Un arreglo de números. Regresa: La cantidad de números negativos en el arreglo, la cantidad de 0's, y la cantidad de valores mayores a 0 en el arreglo.
+          <br>
+          <div class="center-align">
+            <a class="waves-effect waves-light btn"  onclick="pruebaContador()">Contador</a>
+          </div>
+          <div id="tabla2">
+          </div>
+
+          <h4>Script 4:</h4>
+          <h5>Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.
+          </h5>
+          <br>
+          <div class="center-align">
+            <a class="waves-effect waves-light btn"  onclick="pruebaPromeidio()">Promedio</a>
+          </div>
+          <div id="tabla3">
+          </div>
+
+          <h4>Script 5:</h4>
+          <h5>Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.
+          </h5>
+          <br>
+          <div class="center-align">
+            <input type="number" name="Numero" value="" id="inputInverso">
+            <a class="waves-effect waves-light btn"  onclick="inverso()">Inverso</a>
+          </div>
+
+          <h4>Script 6:</h4>
+          <h5>
+          </h5>
+          <br>
+          <div class="center-align">
+            <img src="images/ACM.png" alt="image">
+            <input type="number" name="Input1" value="" id="ACM1">
+            <input type="number" name="Input2" value="" id="ACM2">
+            <input type="number" name="Input3" value="" id="ACM3">
+            <input type="number" name="Input4" value="" id="ACM4">
+            <a class="waves-effect waves-light btn"  onclick="ACM()">Ejecutar</a>
+            <br>
+            <p>Resultado: <p id="resultadoACM"></p></p>
+          </div>
+
+
+
         </div>
-      </div>
+        <div class="col s0 m2">
+
+
+
+        </div>
+
+
+        <h4>Reporte:</h4>
+        <h5>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h5>
+        <p>Diferencias: <br>Java es compilado, no interpretado como javascript <br> JavaScript depende del buscador <br>Java puede crear aplicaciones de escritorio </p>
+        <p>Semejanzas: <br>Java y javascript usan objetos <br> </p>
+        <h5>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h5>
+        <p>getFullYear(): regresa el año</p>
+        <p>getMonth(): regresa el mes</p>
+        <p>getDate(): regresa la fecha</p>
+        <p>getHours(): regresa la hora</p>
+        <p>getMinutes(): regresa los minutos</p>
+        <h5>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h5>
+        <p>pop()</p>
+        <p>push()</p>
+        <p>shift()</p>
+        <p>unshift()</p>
+        <p>length()</p>
+        <h5>¿Cómo se declara una variable con alcance local dentro de una función?</h5>
+        <p>con var dentro de la funcion</p>
+        <h5>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h5>
+        <p>Que son valores que todas las funciones pueden accesar sin que se pierdan</p>
+        <h5>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</h5>
+        <p>search(): para encontrar patrones en los inputs de los usuarios</p>
+          </div>
 
          <script type="text/javascript" src="js/materialize.min.js"></script>
          <script src="entrada.js" charset="utf-8"></script>

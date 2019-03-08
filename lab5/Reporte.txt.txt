@@ -1,6 +1,0 @@
-¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?
-Para agregar una nueva capa de seguridad al servidor
-¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
-Mandando los comandos directamente atraves de el url
-Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?
-Para que si se tenga esa capa de seguridad y poder validar las cosas antes de mandarlas al servidor

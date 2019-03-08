@@ -15,19 +15,18 @@ function sumaRandom(){
   var x = Math.floor((Math.random() * 100) + 1);
   var y = Math.floor((Math.random() * 100) + 1);
   var start = new Date().getTime();
-  var resultado = window.prompt(x + " " + y, 10);
+  var resultado = window.prompt(x + " " + y, );
   var elapsed = new Date().getTime() -start;
   if(resultado==(x+y)){
-    alert("correcto, timepo:" + elapsed);
+    alert("correcto, timepo: " + elapsed + "ms");
   }
-  else alert("incorrecto, timepo:" + elapsed);
+  else alert("incorrecto, timepo: " + elapsed +"ms");
 }
 
-function contador(arr){
-  var arreg=document.getElementById(arr).value;
-  var arreglo = arreg.split(",");
+function contador(arreglo){
   var positivos=0,negativos=0,ceros=0;
-  for(var i=0;arreglo.length;i++){
+  console.log(arreglo.length);
+  for(var i=0;i<arreglo.length;i++){
     if(arreglo[i]>0){
       positivos++;
     }
@@ -36,26 +35,59 @@ function contador(arr){
     }
     else negativos++;
   }
-  alert("Positivos: " + positivos+ " Negativos: " + negativos + " Ceros: " + ceros);
+  return ("Positivos: " + positivos+ " Negativos: " + negativos + " Ceros: " + ceros);
 }
 
-function promedio(){
-  matriz=[[document.getElementById('numero1').innerHTML,document.getElementById('numero2').innerHTML],[document.getElementById('numero3').innerHTML,document.getElementById('numero4').innerHTML],[document.getElementById('numero5').innerHTML,document.getElementById('numero6').innerHTML]];
+function pruebaContador(){
+  var strHTML = "";
+  var prueba=[[1,3,5,7,8,0],[0,3,6,7,8,1,-3,0],[-2,-9,-8,8,0,0,0,0]]
+  strHTML += "<table ><thead><tr><th>Arreglo</th><th>Resultado</th></tr></thead><tbody>";
+  for(var i = 0; i<3;i++){
+    strHTML+="<tr><td>"+prueba[i]+"</td>";
+    strHTML+="<td>"+contador(prueba[i])+"</td></tr>";
+  }
+    strHTML+="</tbody></table>";
+  document.getElementById('tabla2').innerHTML= strHTML;
+
+}
+
+function promedio(matriz){
   var promedio=0;
-  console.log(promedio);
+  var str="";
+  console.log(matriz.length);
   for(var i=0;matriz.length>i;i++){
-    for(var j=0;matriz[i].length;j++){
+    for(var j=0;j<matriz[i].length;j++){
       promedio = promedio + matriz[i][j];
     }
-    console.log(i);
     promedio = promedio/matriz[i].length;
-    alert(promedio);
+    str=+promedio + " ";
     promedio=0;
   }
+  return str;
 }
 
-function inverso(numero){
-  var x;
+function pruebaPromedio(){
+  var strHTML = "";
+  var prueba=[[[1,3,5],[7,8,0]],[[0,3],[6,7,8],[1,-3,0]],[[-2,-9,-8],[8,0],[0,0,0]]]
+  strHTML += "<table ><thead><tr><th>matriz</th><th>Resultado</th></tr></thead><tbody>";
+  for(var i = 0; i<3;i++){
+    strHTML+="<tr><td>"
+    for(var j=0;j<prueba[i].length;j++){
+      strHTML+="["+prueba[i]+"]";
+    }
+
+    strHTML+="</td>";
+    strHTML+="<td>"+promedio(prueba[i])+"</td></tr>";
+  }
+    strHTML+="</tbody></table>";
+  document.getElementById('tabla3').innerHTML= strHTML;
+
+}
+
+
+function inverso(){
+  var numero=document.getElementById('inputInverso').value;
+  var x=0;
   var y = numero;
   do{
     x = x*10+(y%10);
@@ -69,27 +101,40 @@ function ACM(){
   var y1=document.getElementById('ACM2').value;
   var x2=document.getElementById('ACM3').value;
   var y2=document.getElementById('ACM4').value;
-  var resX;
-  var resY;
-  if(x1==x2){
-    resX=0;
+  var input = {
+  x1: x1,
+  y1 : y1,
+  x2 : x2,
+  y2 : y2,
+  resX : function() {
+    if(x1==x2){
+      return 0;
+    }
+    else if(x1>x2){
+      return x1-x2;
+    }
+    else if(x2>x1){
+      return x2-x1;
+    }
+  },
+
+  resY : function() {
+    if(y1==y2){
+      return 0;
+    }
+    else if(y1>y2){
+      return y1-y2;
+    }
+    else if(y2>y1){
+      return y2-y1;
+    }
   }
-  else if(x1>x2){
-    resX=x1-x2;
-  }
-  else if(x2>x1){
-    resX=x2-x1;
-  }
-  if(y1==y2){
-    resY=0;
-  }
-  else if(y1>y2){
-    resY=y1-y2;
-  }
-  else if(y2>y1){
-    resY=y2-y1;
-  }
-  if(resY>resX) document.getElementById('resultadoACM').innerHTML= resY;
-  else document.getElementById('resultadoACM').innerHTML= resX ;
+
+  };
+
+
+
+  if(input.resY>input.resX) document.getElementById('resultadoACM').innerHTML= input.resY;
+  else document.getElementById('resultadoACM').innerHTML= input.resX ;
 
 }
