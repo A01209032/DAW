@@ -54,7 +54,6 @@ function pruebaContador(){
 function promedio(matriz){
   var promedio=0;
   var str="";
-  console.log(matriz.length);
   for(var i=0;matriz.length>i;i++){
     for(var j=0;j<matriz[i].length;j++){
       promedio = promedio + matriz[i][j];
