@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <link rel="stylesheet" href="css/main.css">
+      <title>Laboratorio 11</title>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  </head>
+<body>
+  <div class="row">
+    <div class="col s12">
+      <br>
+      <br>
+    </div>
+        <div class="col s0 m2"></div>
+        <div class="col s12 m8">
+          <div id="form">
+            <h4>Create new account</h4>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+              <h5>Username:</h5>
+              <input type="text" name="username" value="">
+              <p id="error"><?php echo $usernameErr; ?></p>
+              <h5>Email:</h5>
+              <input type="text" name="email" value="">
+              <p id="error"><?php echo $emailErr; ?></p>
+              <h5>Password:</h5>
+              <input type="password" name="password1" value="">
+              <h5>Confirm Password:</h5>
+              <input type="password" name="password2" value="">
+              <p id="error"><?php echo $passwordErr; ?></p>
+              <div id="boton">
+                <br>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <h4>Reporte:</h4>
+          <h5>¿Por qué es una buena práctica separar el controlador de la vista?</h5>
+          <p>Es buena practica porque permite a los desarrolladores a tener flexibilidad en modificar la pagina en caso de ser necesario y que no tengan que cambiar toda</p>
+          <h5>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</h5>
+          <p>$GLOBALS: Permite accesar a todas las variables globales</p>
+          <p>$_SERVER: Tiene informacion de la ubicacion de los archivos</p>
+          <p>$_REQUEST: Sirve para pedir informacion de una forma </p>
+          <p>$_FILES: Arreglo con los archivos subidos al servidor por POST</p>
+          <p>$_ENV: Tiene las variables del entorno, esta despreciada</p>
+          <p>$_COOKIE: Variables que se pasan atraves de cookies</p>
+          <p>$_SESSION: Guarda informacion atraves de diferentes paginas</p>
+          <h5>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</h5>
+          <p>Que pueda mandar informacion atraves de los scripts con session</p>
+          <p>Que pueda conectarse directamente con otros lenguajes como SQL</p>
+          <h5>¿Qué es XSS y cómo se puede prevenir?</h5>
+          <p>XSS es cuando insertan scripts de php dentro de una form y se ejecuta en el servidor</p>
+          <p>Se puede evitar haciendo que toda la informacion que entra al servidor no tenga sintaxis de php</p>
+        </div>
+        <div class="col s0 m2"></div>
+      </div>
+
+         <script type="text/javascript" src="js/materialize.min.js"></script>
+         <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
