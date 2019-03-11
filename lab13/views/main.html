@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <link rel="stylesheet" href="css/main.css">
+      <title>MENU</title>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  </head>
+<body>
+  <div class="row">
+    <div class="col s12">
+      <h1>Bienvenid@ <?php echo $_SESSION['username'] ?></h1>
+    </div>
+        <div class="col s0 m2"></div>
+        <div class="col s12 m8">
+          <div class="row">
+            <div class="col s12 m4">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
+                <p>Select jpg image to upload</p>
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+              </form>
+              </div>
+
+            <div class="col s12 m4">
+              <div class="thumbnail">
+                <a href="images/wp.jpg">
+                  <img src="images/wp.jpg" alt="Lights" style="width:100%">
+                  <div class="caption">
+                    <p>Esta imagen puede ser cambiada por el usuario</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <h4>Reporte:</h4>
+              <h6>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</h6>
+              <p>Session_unset() limpia el arreglo $_SESSION y session_destroy() destruye el archivo de la sesion pero no limpia las variables, por eso es importante borrar primero los datos de la sesion antes de temrinarlo porque asi no se queda basura en el sistema</p>
+              <h6>¿Cuál es la diferencia entre una variable de sesión y una cookie?</h6>
+              <p>Los datos en la cookie se guardan indefinidamente en la computadora del usuario mientras que la variable de sesion se borra cuando se cierra una sesion</p>
+              <h6>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</h6>
+              <p>Se le asigna un nombre unico a todas las fotos para que no ocurran errores</p>
+              <h6>¿Qué es CSRF y cómo puede prevenirse?</h6>
+              <p>Cross-Site Request Forgery</p>
+              <p>Es un ataque que sua una sesion de un usuario para cambiar datos de la aplicacion, para prevenirlo se recomienda "token based mitigation"</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col s0 m2"></div>
+      </div>
+
+         <script type="text/javascript" src="js/materialize.min.js"></script>
+         <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>
