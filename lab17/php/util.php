@@ -31,7 +31,7 @@
 
   function getFruitsByCountry($country){
     $conn = connectDb();
-    $sql = "SELECT name, units, quantity, price, country FROM Fruit WHERE country = '".$country."'";
+    $sql = "SELECT name, units, quantity, price, country FROM Fruit WHERE country = '".$country.'";
     closeDb($conn);
     return $result;
   }
