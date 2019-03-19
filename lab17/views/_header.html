@@ -16,7 +16,10 @@
 
         </div>
         <div class="col s2">
-          <p>Iniciar sesion</p>
+          <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+            <input type="text" name="login" value="1" class="hide">
+            <button type="button" name="button">Iniciar sesion</button>
+          </form>
         </div>
       </div>
     </div>
