@@ -1,0 +1,17 @@
+¿Qué hace el primer bloque del código (bloque del IF)? 
+	Checa si el procedimiento ya existe, y si si lo borras
+
+¿Para qué sirve la instrucción GO? 
+	Para que el programa no interprete el script despues del go hasta que termine lo que este arriba del go
+
+¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica?
+	Recibe de parametro los valores del nuevo material que se va a agregar a la tabla Materiales,modifica la tabla Materiales
+
+Explica en tu reporte qué recibe como parámetro este procedimiento y qué hace.
+	Recibe como paramentro lo que va a buscar en el query, y ejecuta la query
+
+¿Qué ventajas tienen el utilizar Stored Procedures en una aplicación cliente-servidor? 
+
+¿Qué ventajas tiene utilizar SP en un proyecto?
+	Tiene de ventaja que puedes dividir las cosas que tiene que hacer el equipo de desarollo 
+
