@@ -1,0 +1,34 @@
+<section>
+	<h3 class="text-center">
+	<?php
+		$fecha = getdate();
+			echo $fecha["day"];
+			echo " De ";
+			echo $fecha["month"];
+			echo " del ";
+			echo $fecha["year"];
+			echo " con son las ";
+			echo $fecha["hours"];
+			echo " hrs y ";
+			echo $fecha["minutes"];
+			echo " min.";
+	?>
+	</h3>
+	<br>
+	
+	<h3 class="text-center">Bienvenid@ de regreso!
+	<?php if($_SESSION["email"]): 
+		$correo = $_SESSION["email"];
+		echo $correo;
+	?>
+	<?php endif; ?>
+	</h3>
+	<br>
+	<?php 
+	require_once("util.php");
+	$user=$_SESSION["username"];
+	$_SESSION["Rol"]= getrol($user);
+	$rol=getrol($user);
+	?> 
+	<h3 class="text-center">Rol:  <?php echo $rol ?> </h3>
+</section>

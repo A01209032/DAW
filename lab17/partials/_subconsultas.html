@@ -1,0 +1,79 @@
+<style type="text/css">
+    #resultados {
+        width: 48%;
+        display: inline-block;
+    }
+    
+    #consultas {
+        width: 48%;
+        display: inline-block;
+    }
+    #resultados div {
+        background-color: #F0F0F0;
+        margin: 5px;
+        min-height: 55px;
+    }
+</style>
+
+<h3>Soy De Subconsultas!</h3>
+<div class="container">
+    <div id="resultados">
+        <div id="res-monto-trans">
+            
+        </div>
+        <div id="res-transaccion-nombre">
+            
+        </div>
+        <div id="res-personal-habilitado">
+            
+        </div>
+        <div id="res-areas-trabajo">
+            
+        </div>
+        <div id="res-transaccion-tipo">
+            
+        </div>
+        <div id="res-cuenta-info">
+            
+        </div>
+    </div>
+    <div id="consultas">
+        <div id="cons-monto-trans" class="consulta">
+            <h4>Consulta Monto de Transacción</h4>
+            <input type="text" name="min" placeholder="Min" id="in-monto-trans-min"/>
+            <input type="text" name="max" placeholder="Max" id="in-monto-trans-max"/>
+            <button id="sbm-monto-trans">Consultar</button>
+        </div>
+        <div id="cons-transaccion-nombre" class="consulta">
+            <h4>Consulta Transacción por Nombre</h4>
+            <input type="text" name="nombre" placeholder="Nombre" id="in-transaccion-nombre-nombre"/>
+            <input type="text" name="apellido" placeholder="Apellido" id="in-transaccion-nombre-apellido"/>
+            <button id="sbm-transaccion-nombre">Consultar</button>
+        </div>
+        <div id="cons-personal-habilitado" class="consulta">
+            <h4>Consulta Personal Habilitado</h4>
+            <input type="date" name="fecha1" id="in-personal-habilitado-fecha1"/>
+            <input type="date" name="fecha2" id="in-personal-habilitado-fecha2"/>
+            <button id="sbm-personal-habilitado">Consultar</button>
+        </div>
+        <div id="cons-areas-trabajo" class="consulta">
+            <h4>Consulta Areas de Trabajo</h4>
+            <input type="text" name="nombre" placeholder="Nombre" id="in-areas-trabajo-nombre"/>
+            <input type="text" name="apellido" placeholder="Apellido" id="in-areas-trabajo-apellido"/>
+            <button id="sbm-areas-trabajo">Consultar</button>
+        </div>
+        <div id="cons-transaccion-tipo" class="consulta">
+            <h4>Consulta Transacción por Tipo</h4>
+            <input type="text" name="tipo" placeholder="Tipo" id="in-transaccion-tipo-tipo"/>
+            <button id="sbm-transaccion-tipo">Consultar</button>
+        </div>
+        <div id="cons-cuenta-info" class="consulta">
+            <h4>Consulta Información de Cuenta</h4>
+            <input type="text" name="nombre" placeholder="Nombre" id="in-cuenta-info-nombre"/>
+            <input type="text" name="apellido" placeholder="Apellido" id="in-cuenta-info-apellido"/>
+            <button id="sbm-cuenta-info">Consultar</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/subconsultas.js"></script>
