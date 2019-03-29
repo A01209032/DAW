@@ -1,0 +1,71 @@
+code La suma de las cantidades e importe total de todas las entregas realizadas durante el 97. 
+
+SET DATEFORMAT DMY
+SELECT SUM(E.Cantidad) AS 'Suma cantidades', SUM (E.Cantidad*((M.Costo*((m.PorcentajeImpuesto/100)+1)))) AS 'Importe Total'
+FROM Entregan AS E, Materiales AS M
+WHERE M.Clave=E.Clave AND (E.Fecha BETWEEN '01/01/1997' AND '31/12/1997')
+546.00	44789.4720000000
+1 tupla
+
+code Para cada proveedor, obtener la razón social del proveedor, número de entregas e importe total de las entregas realizadas. 
+
+SELECT Prov.RazonSocial, COUNT(E.Cantidad) AS 'Número de Entregas', SUM (((M.Costo*((m.PorcentajeImpuesto/100)+1)))*E.Cantidad) AS 'importe total'
+FROM Proveedores AS Prov, Entregan AS E, Materiales AS M
+WHERE Prov.RFC=E.RFC AND M.Clave=E.Clave
+GROUP BY Prov.RazonSocial
+Alvin	15	794295.2064000000
+Cecoferre	18	860441.9770000000
+Comex	15	801930.5980000000
+La Ferre	18	919531.4300000000
+La fragua	18	2301675.6920000000
+64 tuplas
+
+code Por cada material obtener la clave y descripción del material, la cantidad total entregada, la mínima cantidad entregada, la máxima cantidad entregada, el importe total de las entregas de aquellos materiales en los que la cantidad promedio entregada sea mayor a 400. 
+
+SELECT M.Clave, M.Descripcion, SUM(E.Cantidad) AS 'Cantidad total entregada', MIN(E.Cantidad) AS 'Minima cantidad entregada', MAX(E.Cantidad) AS 'Maxima cantidad entregada', SUM(((M.Costo*((m.PorcentajeImpuesto/100)+1)))*E.Cantidad) AS 'importe total'
+FROM Materiales AS M, Entregan AS E
+where M.Clave=E.Clave
+GROUP BY M.Clave, M.Descripcion
+HAVING AVG(E.Cantidad)>400
+1010	Varilla 4/32	1718.00	523.00	667.00	201560.9140000000
+1040	Varilla 3/18	1349.00	263.00	546.00	220329.4720000000
+1050	Varilla 4/34	1216.00	90.00	623.00	217268.8000000000
+1080	Ladrillos rojos	1214.00	86.00	699.00	62011.1200000000
+1100	Block	1688.00	466.00	699.00	51754.0800000000
+15 tuplas
+
+code Para cada proveedor, indicar su razón social y mostrar la cantidad promedio de cada material entregado, detallando la clave y descripción del material, excluyendo aquellos proveedores para los que la cantidad promedio sea menor a 500. 
+
+SELECT Prov.RazonSocial, AVG(E.Cantidad) AS 'Promedio de material', m.Clave, M.Descripcion
+FROM Proveedores AS Prov,Materiales AS M, Entregan AS E
+WHERE Prov.RFC=E.RFC AND M.Clave=E.Clave
+GROUP BY Prov.RazonSocial, m.Clave, M.Descripcion
+HAVING AVG(E.Cantidad) >= 500
+Oviedo	572.666666	1010	Varilla 4/32
+La Ferre	562.666666	1100	Block
+Oviedo	509.666666	1410	Pintura B1021
+3 tuplas
+
+code Mostrar en una solo consulta los mismos datos que en la consulta anterior pero para dos grupos de proveedores: aquellos para los que la cantidad promedio entregada es menor a 370 y aquellos para los que la cantidad promedio entregada sea mayor a 450.
+
+SELECT Prov.RazonSocial, AVG(E.Cantidad) AS 'Promedio de material', m.Clave, M.Descripcion
+FROM Proveedores AS Prov,Materiales AS M, Entregan AS E
+WHERE Prov.RFC=E.RFC AND M.Clave=E.Clave
+GROUP BY Prov.RazonSocial, m.Clave, M.Descripcion
+HAVING AVG(E.Cantidad) < 370 OR AVG(E.Cantidad) > 450
+La fragua	142.000000	1000	Varilla 3/16
+Oviedo	572.666666	1010	Varilla 4/32
+La Ferre	356.000000	1020	Varilla 3/17
+Cecoferre	212.000000	1030	Varilla 4/33
+34 tuplas
+
+INSERT INTO tabla VALUES (valorcolumna1, valorcolumna2, [...] , valorcolumnan) ; 
+
+Considerando que los valores de tipos CHAR y VARCHAR deben ir encerrados entre apóstrofes, los valores numéricos se escriben directamente y los de fecha, como '1-JAN-00' para 1o. de enero del 2000, inserta cinco nuevos materiales.
+
+code Clave y descripción de los materiales que nunca han sido entregados. 
+code Razón social de los proveedores que han realizado entregas tanto al proyecto 'Vamos México' como al proyecto 'Querétaro Limpio'. 
+code Descripción de los materiales que nunca han sido entregados al proyecto 'CIT Yucatán'. 
+code Razón social y promedio de cantidad entregada de los proveedores cuyo promedio de cantidad entregada es mayor al promedio de la cantidad entregada por el proveedor con el RFC 'VAGO780901'. 
+code RFC, razón social de los proveedores que participaron en el proyecto 'Infonavit Durango' y cuyas cantidades totales entregadas en el 2000 fueron mayores a las cantidades totales entregadas en el 2001.
+ 	

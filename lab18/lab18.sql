@@ -2,19 +2,19 @@
 
 
 SET DATEFORMAT DMY
-SELECT SUM(E.Cantidad) AS 'Suma cantidades', SUM (E.Cantidad*((M.Costo*((m.PorcentajeImpuesto/100)+1)))) AS 'importe total'
+SELECT SUM(E.Cantidad) AS 'Suma cantidades', SUM (E.Cantidad*((M.Costo*((m.PorcentajeImpuesto/100)+1)))) AS 'Importe Total'
 FROM Entregan AS E, Materiales AS M
 WHERE M.Clave=E.Clave AND (E.Fecha BETWEEN '01/01/1997' AND '31/12/1997')
 
 
 
-SELECT Prov.RazonSocial, COUNT(E.Cantidad) AS 'número de entregas', SUM (((M.Costo*((m.PorcentajeImpuesto/100)+1)))*E.Cantidad) AS 'importe total'
+SELECT Prov.RazonSocial, COUNT(E.Cantidad) AS 'Número de Entregas', SUM (((M.Costo*((m.PorcentajeImpuesto/100)+1)))*E.Cantidad) AS 'importe total'
 FROM Proveedores AS Prov, Entregan AS E, Materiales AS M
 WHERE Prov.RFC=E.RFC AND M.Clave=E.Clave
 GROUP BY Prov.RazonSocial
 
 
-SELECT M.Clave, M.Descripcion, SUM(E.Cantidad) AS 'cantidad total entregada', MIN(E.Cantidad) AS 'minima cantidad entregada', MAX(E.Cantidad) AS 'maxima cantidad entregada', SUM(((M.Costo*((m.PorcentajeImpuesto/100)+1)))*E.Cantidad) AS 'importe total'
+SELECT M.Clave, M.Descripcion, SUM(E.Cantidad) AS 'Cantidad total entregada', MIN(E.Cantidad) AS 'Minima cantidad entregada', MAX(E.Cantidad) AS 'Maxima cantidad entregada', SUM(((M.Costo*((m.PorcentajeImpuesto/100)+1)))*E.Cantidad) AS 'importe total'
 FROM Materiales AS M, Entregan AS E
 where M.Clave=E.Clave
 GROUP BY M.Clave, M.Descripcion
