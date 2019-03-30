@@ -35,12 +35,3 @@ function sendRequest(){
    }
 }
 
-function selectValue() {
-
-   var list=document.getElementById("list");
-   var userInput=document.getElementById("userInput");
-   var ajaxResponse=document.getElementById('ajaxResponse');
-   userInput.value=list.options[list.selectedIndex].text;
-   ajaxResponse.style.visibility="hidden";
-   userInput.focus();
-}

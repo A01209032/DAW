@@ -3,17 +3,50 @@
     <head>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <meta charset=UTF-8>
     </head>
 
     <body>
+        <div class=row>
+          <div class="col s2"></div>
+          <div class="col s8">
+            <br><br><br>
+            <form>
+               <div class="input-field col s12">
+               <i class="material-icons prefix">textsms</i>
+              <select>
+                <div id="ajaxResponse"></div>
+              </select>
+              
+              </div>
+             
+            </form>
         
-        <form>
-            <input type="text" id="userInput" onkeyup="sendRequest()"> 
-        </form>
+            
         
-        <div id="ajaxResponse"></div>
+            <br><br><br>
+        
+        
+            <div id='cuestionario'>
+              <h4>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications?</h4>
+              <p></p>
+              <h4>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</h4>
+              <p></p>
+              <h4>¿Qué es JSON?</h4>
+            <p></p>
+            </div>
+            
+            
+          </div>
+          <div class="col s2"></div>
+        </div>
         
         <script type="text/javascript" src="js/ajax.js"></script>
+        <!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"> </script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+     
       </body>
 </html>

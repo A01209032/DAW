@@ -1,20 +1,32 @@
-¿Qué hace el primer bloque del código (bloque del IF)? 
+ï¿½Quï¿½ hace el primer bloque del cï¿½digo (bloque del IF)? 
 	Checa si el procedimiento ya existe, y si si lo borras
 
-¿Para qué sirve la instrucción GO? 
+ï¿½Para quï¿½ sirve la instrucciï¿½n GO? 
 	Para que el programa no interprete el script despues del go hasta que termine lo que este arriba del go
 
-¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica?
+ï¿½Explica que recibe como parï¿½metro este Procedimiento y quï¿½ tabla modifica?
 	Recibe de parametro los valores del nuevo material que se va a agregar a la tabla Materiales,modifica la tabla Materiales
 
-Explica en tu reporte qué recibe como parámetro este procedimiento y qué hace.
+Explica en tu reporte quï¿½ recibe como parï¿½metro este procedimiento y quï¿½ hace.
 	Recibe como paramentro lo que va a buscar en el query, y ejecuta la query
 
-¿Qué ventajas tienen el utilizar Stored Procedures en una aplicación cliente-servidor? 
+ï¿½Quï¿½ ventajas tienen el utilizar Stored Procedures en una aplicaciï¿½n cliente-servidor? 
 	Facilita la interaccion con la base de datos
 
-¿Qué ventajas tiene utilizar SP en un proyecto?
+ï¿½Quï¿½ ventajas tiene utilizar SP en un proyecto?
 	Tiene de ventaja que puedes dividir las cosas que tiene que hacer el equipo de desarollo 
+
+Stored procedure para lab 16: se ejecuta en util.php
+
+  delimiter //
+  CREATE PROCEDURE creaCuenta(
+                username varchar(50),
+                email varchar(50),
+                password varchar(50))
+            BEGIN
+               INSERT INTO `usuarios`(`username`, `email`, `password`) values(username,email,password);
+            END
+
 
 Stored procedure para el proyecto:
 
