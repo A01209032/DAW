@@ -1,14 +1,11 @@
 CREATE PROCEDURE creaMaterial
-                     @uclave NUMERIC(5,0),
-                     @udescripcion VARCHAR(50),
+          @uclave NUMERIC(5,0),
+          @udescripcion VARCHAR(50),
                      @ucosto NUMERIC(8,2),
                      @uimpuesto NUMERIC(6,2)
                  AS
                      INSERT INTO Materiales VALUES(@uclave, @udescripcion, @ucosto, @uimpuesto)
 
-IF EXISTS (SELECT name FROM sysobjects
-                            WHERE name = 'eliminaMaterial' AND type = 'P')
-                     DROP PROCEDURE eliminaMaterial
 
 CREATE PROCEDURE eliminaMaterial
                      @uclave NUMERIC(5,0)
@@ -16,31 +13,19 @@ CREATE PROCEDURE eliminaMaterial
                      DELETE FROM Materiales WHERE @uclave = Clave
 
 
- IF EXISTS (SELECT name FROM sysobjects
-                            WHERE name = 'modificarMaterial' AND type = 'P')
-                     DROP PROCEDURE modificarMaterial
-
  CREATE PROCEDURE modificarMaterial
                      @uclave numeric(5),
-                     @udescripcion varchar(50),
+                     @udesc varchar(50),
                      @ucosto numeric(8,2),
                      @uimpuesto numeric(6,2)
                   AS
-                     UPDATE Materiales SET Descripcion = @udescripcion, Costo = @ucosto, PorcentajeImpuesto = @uimpuesto WHERE  @uclave = Clave
-
- IF EXISTS (SELECT name FROM sysobjects
-                            WHERE name = 'creaProveedor' AND type = 'P')
-                     DROP PROCEDURE creaProveedor
+                     UPDATE Materiales SET Descripcion = @udesc, Costo = @ucosto, PorcentajeImpuesto = @uimpuesto WHERE  @uclave = Clave
 
 CREATE PROCEDURE creaProveedor
                      @uRFC char(13),
-                     @uRazonSocial VARCHAR(50)
+                     @uRS VARCHAR(50)
                  AS
-                     INSERT INTO Proveedores VALUES(@uRFC, @uRazonSocial)
-
-IF EXISTS (SELECT name FROM sysobjects
-                            WHERE name = 'modificarProveedor' AND type = 'P')
-                     DROP PROCEDURE modificarProveedor
+                     INSERT INTO Proveedores VALUES(@uRFC, @uRS)
 
 CREATE PROCEDURE modificarProveedor
                      @uRFC char(13),
@@ -48,33 +33,24 @@ CREATE PROCEDURE modificarProveedor
                  AS
                      UPDATE Proveedores SET RazonSocial = @uRazonSocial WHERE  @uRFC = RFC
 
- IF EXISTS (SELECT name FROM sysobjects
-                            WHERE name = 'eliminaProveedor' AND type = 'P')
-                     DROP PROCEDURE eliminaProveedor
+
 
 CREATE PROCEDURE eliminaProveedor
                      @uRFC char(13)
                  AS
                      DELETE FROM Proveedores WHERE @uRFC = RFC
 
-IF EXISTS (SELECT name FROM sysobjects
-                       WHERE name = 'creaProyecto' AND type = 'P')
-                DROP PROCEDURE creaProyecto
-            GO
 
-            CREATE PROCEDURE creaProyecto
+
+CREATE PROCEDURE creaProyecto
                 @unumero numeric(5),
                 @udenominacion VARCHAR(50)
             AS
                 INSERT INTO Proyectos VALUES(@unumero, @udenominacion)
             GO
 
-IF EXISTS (SELECT name FROM sysobjects
-                       WHERE name = 'modificarProyecto' AND type = 'P')
-                DROP PROCEDURE modificarProyecto
-            GO
 
-            CREATE PROCEDURE modificarProyecto
+CREATE PROCEDURE modificarProyecto
                 @unumero numeric(5),
                 @udenominacion VARCHAR(50)
             AS
@@ -82,12 +58,8 @@ IF EXISTS (SELECT name FROM sysobjects
             GO
 
 
-IF EXISTS (SELECT name FROM sysobjects
-                       WHERE name = 'eliminaProyecto' AND type = 'P')
-                DROP PROCEDURE eliminaProyecto
-            GO
 
-            CREATE PROCEDURE eliminaProyecto
+CREATE PROCEDURE eliminaProyecto
                 @unumero numeric(5)
             AS
                 DELETE FROM Proyectos WHERE @unumero = Numero
@@ -97,12 +69,7 @@ IF EXISTS (SELECT name FROM sysobjects
 
 set dateformat dmy
 
-IF EXISTS (SELECT name FROM sysobjects
-                       WHERE name = 'creaEntrega' AND type = 'P')
-                DROP PROCEDURE creaEntrega
-            GO
-
-            CREATE PROCEDURE creaEntrega
+CREATE PROCEDURE creaEntrega
                 @uclave numeric(5),
                 @uRFC char(13),
                 @unumero numeric(5),
@@ -112,12 +79,8 @@ IF EXISTS (SELECT name FROM sysobjects
                 INSERT INTO Entregan VALUES(@uclave, @uRFC, @unumero, @ufecha, @ucantidad)
             GO
 
-IF EXISTS (SELECT name FROM sysobjects
-                       WHERE name = 'modificarEntrega' AND type = 'P')
-                DROP PROCEDURE modificarEntrega
-            GO
 
-            CREATE PROCEDURE modificarEntrega
+CREATE PROCEDURE modificarEntrega
                 @uclave numeric(5),
                 @uRFC char(13),
                 @unumero numeric(5),
@@ -128,12 +91,7 @@ IF EXISTS (SELECT name FROM sysobjects
             GO
 
 
-IF EXISTS (SELECT name FROM sysobjects
-                       WHERE name = 'eliminaEntrega' AND type = 'P')
-                DROP PROCEDURE eliminaEntrega
-            GO
-
-            CREATE PROCEDURE eliminaEntrega
+CREATE PROCEDURE eliminaEntrega
                 @uclave numeric(5),
                 @uRFC char(13),
                 @unumero numeric(5),

@@ -11,7 +11,24 @@ Explica en tu reporte qué recibe como parámetro este procedimiento y qué hace.
 	Recibe como paramentro lo que va a buscar en el query, y ejecuta la query
 
 ¿Qué ventajas tienen el utilizar Stored Procedures en una aplicación cliente-servidor? 
+	Facilita la interaccion con la base de datos
 
 ¿Qué ventajas tiene utilizar SP en un proyecto?
 	Tiene de ventaja que puedes dividir las cosas que tiene que hacer el equipo de desarollo 
+
+Stored procedure para el proyecto:
+
+  delimiter //
+  CREATE PROCEDURE creaServicio(
+                idD int(25),
+                idP int(25),
+                idV int(25),
+                fecha date,
+                idS int(25),
+                Observaciones varchar(140),
+                CR float)
+            BEGIN
+               INSERT INTO `atienden`(`IdDepartamento`, `IdPaciente`, `IdVoluntario`, `Fecha`, `IdServicio`, `Observaciones`, `CuotaRecup`) values(idD,idP,idV,fecha,idS,Observaciones,CR);
+            END//
+
 
