@@ -37,11 +37,7 @@ HAVING AVG(E.Cantidad) < 370 OR AVG(E.Cantidad) > 450
 
 
 
-INSERT INTO Materiales VALUES (1440, 'Manguera 50', 400, 5.5);
-INSERT INTO Materiales VALUES (1450, 'Columna 50', 10000, 8);
-INSERT INTO Materiales VALUES (1460, 'Piso 50x50', 100, 3);
-INSERT INTO Materiales VALUES (1470, 'Remachador', 1000, 2);
-INSERT INTO Materiales VALUES (1480, 'Barra aluminio 3/8', 200, 3.02);
+INSERT INTO Materiales VALUES (1600, 'Tabique 2T', 400, 5.5),(1890, 'Piedrotas', 10000, 8),(1999, 'Maquinaria desechable', 100, 3),(2380, 'Machete', 1000, 2),(3000, 'Pica de aluminio', 200, 3.02);
 
 SELECT * FROM Materiales
 
@@ -75,11 +71,9 @@ WHERE M.Clave NOT IN
   FROM Proyectos AS P, Entregan AS E
   WHERE P.Numero=E.Numero AND P.Denominacion LIKE 'CIT Yucatan'
 )
-  SELECT *FROM Materiales
-select * from Proyectos p, entregan e where e.Numero=p.Numero
 
 
-SELECT Prov.RazonSocial, AVG(E.Cantidad) AS 'Promedio de cantidad entregada'
+SELECT Prov.RazonSocial, AVG(E.Cantidad) AS 'Promedio cantidad entregada'
 FROM Entregan AS E, Proyectos AS P,Proveedores AS Prov
 WHERE P.Numero=E.Numero AND Prov.RFC=E.RFC
 GROUP BY Prov.RazonSocial
