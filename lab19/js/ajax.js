@@ -15,23 +15,31 @@ function getRequestObject() {
 }
 
 function sendRequest(){
-
+   //alert('prueba');
    request=getRequestObject();
    if(request!=null)
    {
-     var userInput = document.getElementById('userInput');
-     var url='controller.php?pattern='+userInput.value;
+       //alert('prueba null');
+     var userInput = document.getElementById('input').value;
+     
+     var url='palabras.php?pattern='+userInput;
      request.open('GET',url,true);
      request.onreadystatechange = 
             function() { 
+                //alert('prueba funcion');
                 if((request.readyState==4)){
+                    //alert()
+                    //alert('prueba state');
                     // Asynchronous response has arrived
                     var ajaxResponse=document.getElementById('ajaxResponse');
                     ajaxResponse.innerHTML=request.responseText;
                     ajaxResponse.style.visibility="visible";
+                    
                 }     
             };
      request.send(null);
    }
 }
+
+
 

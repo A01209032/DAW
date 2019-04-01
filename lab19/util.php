@@ -16,7 +16,7 @@
   	mysqli_close($conexion);
   }
     
-    function creaPalabra($nombre){
+    function creaPalabra($palabra){
         $conn= conectDb();
         $query="INSERT INTO `palabras`( `palabra`) VALUES ('$palabra')";
         $res= mysqli_query($conn,$query);
@@ -28,20 +28,22 @@
         
     }
     
-    function consultaPalabras(){
+   function consultaPalabras(){
         $conn=conectDb();
         $query = "SELECT palabra FROM palabras";
         $res = mysqli_query($conn, $query);
-        $resultado=array();
+        $resultado;
         if(mysqli_num_rows($res) > 0){//If there are actually results
+            $resultado="<table>"."<tr>"."<th>Palabras</th>"."</tr>";
         while($row = mysqli_fetch_array($res)){
-            $resultado[]=$row['palabra'];
+            $resultado=$resultado."<tr>"."<td>" . $row['palabra'] ."</td>"."</td>"."</tr>";
         }
+        $resultado=$resultado."</table>";
             closeDB($conn);
             
         }else{
             closeDB($conn);
-            $resultado[]="No results";
+            $resultado="No results";
         }
         return $resultado;
     }
