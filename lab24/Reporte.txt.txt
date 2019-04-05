@@ -1,0 +1,28 @@
+¿Que pasa cuando deseas realizar esta consulta? 
+
+Se muestra en las dos sesiones
+
+¿Qué pasa cuando deseas realizar esta consulta? 
+
+No se muestra nada
+
+Explica por qué ocurre dicho evento. 
+
+Si se muestra la tupla. Se muestra porque la transaccion bloquea las peticion que seleccionan todas las tuplas, pero no las que seleccionan tuplas especificas
+
+¿Qué ocurrió y por qué? 
+
+Se muestra la tabla sin los cambios de la transaccion prueba2 porque se borro
+
+¿Para qué sirve el comando @@ERROR revisa la ayuda en línea? 
+
+Returns 0 if the previous Transact-SQL statement encountered no errors.
+
+¿Qué hace la transacción? 
+
+Inserta tres tuplas a ClientesBanca
+
+¿Hubo alguna modificación en la tabla? Explica qué pasó y por qué. 
+
+No ocurrio ninguna modificacion a la tabla ya que se hizo un rollback de la transaccion porque ocurrio un error
+
